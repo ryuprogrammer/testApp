@@ -28,7 +28,8 @@ class _TodoAddPageState extends State<TodoAddPage> {
             Text(_text, style: TextStyle(
               fontSize: 50,
               color: Colors.blue
-              )),
+              )
+              ),
             const SizedBox(height: 8),
             // テキスト入力
             TextField(
@@ -61,7 +62,8 @@ class _TodoAddPageState extends State<TodoAddPage> {
                   // ボタンをクリックした時の処理
                   onPressed: () {
                     // popで前の画面に戻る
-                    Navigator.of(context).pop();
+                    // popの引数から前の画面にデータを渡す
+                    Navigator.of(context).pop(_text);
                   },
                   child: Text('キャンセル'),
                 ),
